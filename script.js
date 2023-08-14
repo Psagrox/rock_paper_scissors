@@ -99,20 +99,33 @@ var scoreComputer = document.getElementById("computerScore");
 //Function to update the score
 var userChoice;
 var randomChoice;
+
+var log = document.getElementById("log");
+
+
 function updateScore (userChoice, randomChoice){
-    if (userChoice == randomChoice){
-        console.log("Draft");
-    } else if (
-        (userChoice == "Rock" && randomChoice == "Scissors") ||
-        (userChoice == "Paper" && randomChoice == "Rock") ||
-        (userChoice == "Scissors" && randomChoice == "Paper")
-    ) {
+    while (scoreUser < 5 && scoreComputer < 5){
+        if (userChoice == randomChoice){
+            console.log("Draft");
+        } else if (
+            (userChoice == "Rock" && randomChoice == "Scissors") ||
+            (userChoice == "Paper" && randomChoice == "Rock") ||
+            (userChoice == "Scissors" && randomChoice == "Paper")
+        ) {
+            console.log("User Wins");
+            scoreUser.textContent = parseInt(scoreUser.textContent) + 1;
+        } else {
+            console.log("Computer Wins");
+            scoreComputer.textContent = parseInt(scoreComputer.textContent) + 1;
+        }
+    } if (scoreUser == 5){
         console.log("User Wins");
-        scoreUser.textContent = parseInt(scoreUser.textContent) + 1;
-    } else {
+        log.textContent = "User Wins";
+    } else if (scoreComputer == 5){
         console.log("Computer Wins");
-        scoreComputer.textContent = parseInt(scoreComputer.textContent) + 1;
+        log.textContent = "Computer Wins";
     }
+    
 }
 
 //Assign events of clicks of the buttons
