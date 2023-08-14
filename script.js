@@ -8,17 +8,17 @@ document.getElementById("boton").addEventListener("click",function(){
         case 1:
             // User choose Rock
             opcionUsuario = "Rock";
-            console.log("You choose: " + opcion_usuario);
+            console.log("You choose: " + opcionUsuario);
             break;
         case 2:
             // User choose Paper
-            opcion_usuario = "Paper";
-            console.log("You choose: " + opcion_usuario);
+            opcionUsuario = "Paper";
+            console.log("You choose: " + opcionUsuario);
             break;
         case 3:
             // User choose Scissors
-            opcion_usuario = "Scissors";
-            console.log("You choose: " + opcion_usuario);
+            opcionUsuario = "Scissors";
+            console.log("You choose: " + opcionUsuario);
             break;
         default:
             //Invalid Option
@@ -43,10 +43,10 @@ document.getElementById("boton").addEventListener("click",function(){
     var opcionAleatoria = opcion_compu(opciones);
     console.log("Computer choose: " + opcionAleatoria);
 
+    //The variables that will hold the score
+    var scoreUser = document.getElementById("userScore");
+    var scoreComputer = document.getElementById("computerScore");
 
-
-    var count_user;
-    var count_computer;
     if (opcionUsuario == opcionAleatoria) {
         //draft
         console.log("Draft");
@@ -54,9 +54,13 @@ document.getElementById("boton").addEventListener("click",function(){
     }else if (opcionUsuario == "Rock" && opcionAleatoria == "Paper"){
         //If the User choose Rock and computer choose paper computer wins
         console.log("Computer Wins");
+        scoreComputer.textContent = scoreComputer ++;
+
     }else if (opcionUsuario == "Rock" && opcionAleatoria == "Scissors"){
         //IF the User choose Rock and computer choose scissors User Wins
         console.log("User Wins");
+        scoreUser.textContent = scoreUser ++;
+
     }else if (opcionUsuario == "Paper" && opcionAleatoria == "Scissors"){
         //If the User choose Paper and computer choose scissors computer wins
         console.log("Computer Wins");
@@ -88,4 +92,3 @@ document.getElementById("boton").addEventListener("click",function(){
 
 
 
-//IF the User choose scissors and computer choose Paper User Wins
