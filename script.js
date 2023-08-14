@@ -104,7 +104,7 @@ var log = document.getElementById("log");
 
 
 function updateScore (userChoice, randomChoice){
-    while (scoreUser < 5 && scoreComputer < 5){
+    if (parseInt(scoreUser.textContent) < 5 && parseInt(scoreComputer.textContent) < 5){
         if (userChoice == randomChoice){
             console.log("Draft");
         } else if (
@@ -118,15 +118,24 @@ function updateScore (userChoice, randomChoice){
             console.log("Computer Wins");
             scoreComputer.textContent = parseInt(scoreComputer.textContent) + 1;
         }
-    } if (scoreUser == 5){
-        console.log("User Wins");
-        log.textContent = "User Wins";
-    } else if (scoreComputer == 5){
-        console.log("Computer Wins");
-        log.textContent = "Computer Wins";
-    }
-    
+        if (parseInt(scoreUser.textContent) == 5){
+            console.log("User Wins");
+            log.textContent = "User Wins";
+        } else if (parseInt(scoreComputer.textContent) == 5){
+            console.log("Computer Wins");
+            log.textContent = "Computer Wins";
+        }
+} else {
+    //game finished so it is reseat
+    console.log("Game over");
+    scoreUser.textContent = 0;
+    scoreComputer.textContent = 0;
+    log.textContent = "Game over";
+    matchDetails.textContent = "Please choose an option to start again"
 }
+}
+
+var matchDetails = document.getElementById("matchDetails");
 
 //Assign events of clicks of the buttons
 rockButton.addEventListener("click", function(){
@@ -134,6 +143,7 @@ rockButton.addEventListener("click", function(){
     var randomChoice = computerChoice(options);
     console.log("You choose: " + userChoice);
     console.log("Computer choose: " + randomChoice);
+    matchDetails.textContent = ("You choose: " + userChoice + " | " + "Computer choose: " + randomChoice);
     updateScore(userChoice, randomChoice);
 });
 
@@ -142,6 +152,7 @@ scissorsButton.addEventListener("click", function(){
     var randomChoice = computerChoice(options);
     console.log("You choose: " + userChoice);
     console.log("Computer choose: " + randomChoice);
+    matchDetails.textContent = ("You choose: " + userChoice + " | " + "Computer choose: " + randomChoice);
     updateScore(userChoice, randomChoice);
 });
 
@@ -150,6 +161,7 @@ paperButton.addEventListener("click", function(){
     var randomChoice = computerChoice(options);
     console.log("You choose: " + userChoice);
     console.log("Computer choose: " + randomChoice);
+    matchDetails.textContent = ("You choose: " + userChoice + " | " + "Computer choose: " + randomChoice);
     updateScore(userChoice, randomChoice);
 });
 
