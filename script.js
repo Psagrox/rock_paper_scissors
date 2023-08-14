@@ -1,23 +1,35 @@
 //The user generate an input, which must be Rock, Paper or Scissors
-let opcion_usuario = prompt("¿que opcion queres? 1.Rock 2.Paper 3.Scissors");
+document.getElementById("boton").addEventListener("click",function(){
+    let opcion_usuario = prompt("¿que opcion queres? 1.Rock 2.Paper 3.Scissors");
+    //variable to store user input
+    let opcionUsuario;
 
-switch (opcion_usuario){
-    case 1:
-        // User choose Rock
-        return opcion_usuario = "Rock";
-        console.log("You choose:" + opcion_usuario);
-        break;
-    case 2:
-        // User choose Paper
-        return opcion_usuario = "Paper";
-        console.log("You choose:" + opcion_usuario);
-        break;
-    case 2:
-        // User choose Scissors
-        return opcion_usuario = "Scissors";
-        console.log("You choose:" + opcion_usuario);
-        break;
-}
+    switch (parseInt(opcion_usuario)){
+        case 1:
+            // User choose Rock
+            opcionUsuario = "Rock";
+            console.log("You choose: " + opcion_usuario);
+            break;
+        case 2:
+            // User choose Paper
+            opcion_usuario = "Paper";
+            console.log("You choose: " + opcion_usuario);
+            break;
+        case 3:
+            // User choose Scissors
+            opcion_usuario = "Scissors";
+            console.log("You choose: " + opcion_usuario);
+            break;
+        default:
+            //Invalid Option
+            console.log("The option that you choose: " + opcion_usuario + " is invalid");
+            alert("The option that you choose: " + opcion_usuario + " is invalid");
+            break;
+    }
+
+})
+
+
 
 
 //The computer generate a random responds to the user input
@@ -31,8 +43,16 @@ function opcion_compu(opciones){
 
 var opcionAleatoria = opcion_compu(opciones);
 console.log("Computer choose:" + opcionAleatoria);
-//If the User choose Rock and computer choose rock is a draft
 
+
+
+var count_user;
+var count_computer;
+if (opcionUsuario == opcionAleatoria) {
+    //draft
+    console.log("Draft");
+
+}
 //If the User choose Rock and computer choose paper computer wins
 
 //IF the User choose Rock and computer choose scissors User Wins
