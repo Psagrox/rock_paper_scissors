@@ -27,32 +27,36 @@ document.getElementById("boton").addEventListener("click",function(){
             break;
     }
 
+
+
+
+
+    //The computer generate a random responds to the user input
+
+    var opcion_compu;
+    var opciones = ["Rock", "Paper", "Scissors"];
+
+    function opcion_compu(opciones){
+        return opciones[Math.floor(Math.random()*opciones.length)];
+    }
+
+    var opcionAleatoria = opcion_compu(opciones);
+    console.log("Computer choose: " + opcionAleatoria);
+
+
+
+    var count_user;
+    var count_computer;
+    if (opcionUsuario == opcionAleatoria) {
+        //draft
+        console.log("Draft");
+
+    }else {
+        console.log("a chambear");
+    }
+
 })
 
-
-
-
-//The computer generate a random responds to the user input
-
-var opcion_compu;
-var opciones = ["Rock", "Paper", "Scissors"];
-
-function opcion_compu(opciones){
-    return opciones[Math.floor(Math.random()*opciones.length)];
-}
-
-var opcionAleatoria = opcion_compu(opciones);
-console.log("Computer choose:" + opcionAleatoria);
-
-
-
-var count_user;
-var count_computer;
-if (opcionUsuario == opcionAleatoria) {
-    //draft
-    console.log("Draft");
-
-}
 //If the User choose Rock and computer choose paper computer wins
 
 //IF the User choose Rock and computer choose scissors User Wins
