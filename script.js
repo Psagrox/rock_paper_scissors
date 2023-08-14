@@ -51,24 +51,41 @@ document.getElementById("boton").addEventListener("click",function(){
         //draft
         console.log("Draft");
 
+    }else if (opcionUsuario == "Rock" && opcionAleatoria == "Paper"){
+        //If the User choose Rock and computer choose paper computer wins
+        console.log("Computer Wins");
+    }else if (opcionUsuario == "Rock" && opcionAleatoria == "Scissors"){
+        //IF the User choose Rock and computer choose scissors User Wins
+        console.log("User Wins");
+    }else if (opcionUsuario == "Paper" && opcionAleatoria == "Scissors"){
+        //If the User choose Paper and computer choose scissors computer wins
+        console.log("Computer Wins");
+    }else if (opcionUsuario == "Paper" && opcionAleatoria == "Rock"){
+        //IF the User choose Paper and computer choose Rock User Wins
+        console.log("User Wins");
+    }else if (opcionUsuario == "Scissors" && opcionAleatoria == "Rock"){
+        //If the User choose scissors and computer choose Rock computer wins
+        console.log("Computer Wins");
     }else {
-        console.log("a chambear");
+        //If the User choose scissors and computer choose Rock computer wins
+        console.log("User Wins");
     }
+
 
 })
 
-//If the User choose Rock and computer choose paper computer wins
 
-//IF the User choose Rock and computer choose scissors User Wins
 
-//If the User choose Paper and computer choose Paper is a draft
 
-//If the User choose Paper and computer choose scissors computer wins
 
-//IF the User choose Paper and computer choose Rock User Wins
 
-//If the User choose scissors and computer choose scissors is a draft
 
-//If the User choose scissors and computer choose Rock computer wins
+
+
+
+
+
+
+
 
 //IF the User choose scissors and computer choose Paper User Wins
