@@ -1,0 +1,32 @@
+body{
+    background-color: aquamarine;
+    max-width: 1200 px;
+}
+
+.title{
+    font-size: 48px;
+    justify-content: center;
+    margin: 200px;
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    transform: rotate(-25deg);
+    text-shadow: gray 5px 0 10px;
+}
+
+.content {
+    padding: 20px;
+    background-color: black;
+    box-shadow: yellow 20px 10px 10px;
+    display: flexbox;
+}
+
+.content.buttuns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content .buttuns button{
+    font-size: 30px;
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

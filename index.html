@@ -4,39 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="title">Rock, Paper and Scissors!</div>
 
-    <div class="buttuns">
-        <button id="rockButton">Rock</button>
-        <button id="paperButton">Paper</button>
-        <button id="scissorsButton">Scissors</button>
+    <div class="content">
+        <div class="buttuns">
+            <button id="rockButton">Rock</button>
+            <button id="paperButton">Paper</button>
+            <button id="scissorsButton">Scissors</button>
+        </div>
+        <div class="scores">
+            <div id="userScoreTab">
+                <h2> User score</h2>
+                <h1 id="userScore">0</h1>
+            </div>
+            <div id="computerScoreTab">
+                <h2> Computer Score</h2>
+                <h1 id="computerScore">0</h1>
+            </div>  
+            
+        </div>
+    
+        <div id="log">
+            <h1></h1>
+        </div>
+    
+        <div id="matchDetails">
+            <h3></h3>
+        </div>
+    
+        <div class="script">
+            <script src="script.js" ></script>
+        </div>
     </div>
     
-    <div class="scores">
-        <div id="userScoreTab">
-            <h2> User score</h2>
-            <h1 id="userScore">0</h1>
-        </div>
-        <div id="computerScoreTab">
-            <h2> Computer Score</h2>
-            <h1 id="computerScore">0</h1>
-        </div>  
-    </div>
-
-    <div id="log">
-        <h1></h1>
-    </div>
-
-    <div id="matchDetails">
-        <h3></h3>
-    </div>
-
-    <div class="script">
-        <script src="script.js" ></script>
-    </div>
-
   
 </body>
 </html>
