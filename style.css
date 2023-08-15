@@ -16,23 +16,41 @@ body{
 }
 
 .content {
-    padding: 20px;
+    padding: 3cap;
+    padding-bottom: 50px;
     background-color: black;
     box-shadow: yellow 20px 10px 10px; 
     margin-left: 5%;
     margin-right: 5%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    text-align: center;
     
 }
 
 .content.buttuns{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .content .buttuns button{
+    margin-top: 10px;
     font-size: 30px;
     font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content .scores{
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.content #log {
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.content #matchDetails{
+    font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    padding-top: 15px;
 }
