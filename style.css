@@ -1,29 +1,35 @@
 body{
     background-color: aquamarine;
-    max-width: 1200 px;
+    max-width: 500px ;
+    margin: 0  auto;
 }
 
 .title{
     font-size: 48px;
     justify-content: center;
-    margin: 200px;
+    margin: 20%;
     font-family: monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
     transform: rotate(-25deg);
     text-shadow: gray 5px 0 10px;
+    align-items: center;
 }
 
 .content {
     padding: 20px;
     background-color: black;
-    box-shadow: yellow 20px 10px 10px;
-    display: flexbox;
+    box-shadow: yellow 20px 10px 10px; 
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
 }
 
 .content.buttuns{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
 }
 
 .content .buttuns button{
